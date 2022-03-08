@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		5B1CD32E27D6ACDC000166C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD32D27D6ACDC000166C0 /* AppDelegate.swift */; };
 		5B1CD33027D6ACDC000166C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD32F27D6ACDC000166C0 /* SceneDelegate.swift */; };
-		5B1CD33227D6ACDC000166C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD33127D6ACDC000166C0 /* ViewController.swift */; };
+		5B1CD33227D6ACDC000166C0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD33127D6ACDC000166C0 /* LogInViewController.swift */; };
 		5B1CD33527D6ACDC000166C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CD33327D6ACDC000166C0 /* Main.storyboard */; };
 		5B1CD33727D6ACDD000166C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CD33627D6ACDD000166C0 /* Assets.xcassets */; };
 		5B1CD33A27D6ACDD000166C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B1CD33827D6ACDD000166C0 /* LaunchScreen.storyboard */; };
+		5B1CD34427D6D870000166C0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B1CD34327D6D870000166C0 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5B1CD32A27D6ACDC000166C0 /* LoginApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B1CD32D27D6ACDC000166C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B1CD32F27D6ACDC000166C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5B1CD33127D6ACDC000166C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B1CD33127D6ACDC000166C0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		5B1CD33427D6ACDC000166C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B1CD33627D6ACDD000166C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B1CD33927D6ACDD000166C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B1CD33B27D6ACDD000166C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B1CD34327D6D870000166C0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				5B1CD32D27D6ACDC000166C0 /* AppDelegate.swift */,
 				5B1CD32F27D6ACDC000166C0 /* SceneDelegate.swift */,
-				5B1CD33127D6ACDC000166C0 /* ViewController.swift */,
+				5B1CD33127D6ACDC000166C0 /* LogInViewController.swift */,
+				5B1CD34327D6D870000166C0 /* UserViewController.swift */,
 				5B1CD33327D6ACDC000166C0 /* Main.storyboard */,
 				5B1CD33627D6ACDD000166C0 /* Assets.xcassets */,
 				5B1CD33827D6ACDD000166C0 /* LaunchScreen.storyboard */,
@@ -138,9 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1CD33227D6ACDC000166C0 /* ViewController.swift in Sources */,
+				5B1CD33227D6ACDC000166C0 /* LogInViewController.swift in Sources */,
 				5B1CD32E27D6ACDC000166C0 /* AppDelegate.swift in Sources */,
 				5B1CD33027D6ACDC000166C0 /* SceneDelegate.swift in Sources */,
+				5B1CD34427D6D870000166C0 /* UserViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

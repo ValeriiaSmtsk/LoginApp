@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Log In View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LogInViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,6 +39,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log In"/>
+                                <connections>
+                                    <segue destination="nmV-kq-EUI" kind="presentation" modalPresentationStyle="fullScreen" id="VS9-P2-PoP"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="13n-2E-0Jr">
                                 <rect key="frame" x="30" y="544" width="368" height="30"/>
@@ -75,8 +78,59 @@
             </objects>
             <point key="canvasLocation" x="18.75" y="67.605633802816897"/>
         </scene>
+        <!--User View Controller-->
+        <scene sceneID="yeX-pm-nR3">
+            <objects>
+                <viewController id="nmV-kq-EUI" customClass="UserViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r0y-Io-qok">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hox-al-Z6Q">
+                                <rect key="frame" x="160" y="722" width="108" height="40"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, User!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AzU-IP-9Kl">
+                                <rect key="frame" x="97" y="177" width="234" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XZo-tt-QJT">
+                                <rect key="frame" x="176" y="279" width="76" height="85"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="71"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ldd-Tr-yvi"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ldd-Tr-yvi" firstAttribute="trailing" secondItem="AzU-IP-9Kl" secondAttribute="trailing" constant="97" id="6CU-Nw-mQ2"/>
+                            <constraint firstItem="ldd-Tr-yvi" firstAttribute="bottom" secondItem="Hox-al-Z6Q" secondAttribute="bottom" constant="130" id="B4T-Hq-uOY"/>
+                            <constraint firstItem="XZo-tt-QJT" firstAttribute="width" secondItem="r0y-Io-qok" secondAttribute="width" multiplier="0.17757" id="CPB-oC-LVe"/>
+                            <constraint firstItem="AzU-IP-9Kl" firstAttribute="top" secondItem="ldd-Tr-yvi" secondAttribute="top" constant="133" id="EKW-Nw-SDi"/>
+                            <constraint firstItem="AzU-IP-9Kl" firstAttribute="leading" secondItem="ldd-Tr-yvi" secondAttribute="leading" constant="97" id="M2r-nz-Xyj"/>
+                            <constraint firstItem="ldd-Tr-yvi" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Hox-al-Z6Q" secondAttribute="trailing" constant="160" id="WIB-vp-vuI"/>
+                            <constraint firstItem="XZo-tt-QJT" firstAttribute="top" secondItem="AzU-IP-9Kl" secondAttribute="bottom" constant="60" id="aYp-FI-8Ys"/>
+                            <constraint firstItem="Hox-al-Z6Q" firstAttribute="leading" relation="lessThanOrEqual" secondItem="ldd-Tr-yvi" secondAttribute="leading" constant="160" id="e3s-tN-x58"/>
+                            <constraint firstItem="XZo-tt-QJT" firstAttribute="centerX" secondItem="r0y-Io-qok" secondAttribute="centerX" id="oig-lH-G29"/>
+                            <constraint firstItem="Hox-al-Z6Q" firstAttribute="centerX" secondItem="ldd-Tr-yvi" secondAttribute="centerX" id="ykh-Ge-uxL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gXR-vr-jda"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BEp-La-xMp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.71028037383178" y="66.738660907127439"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="tertiarySystemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
