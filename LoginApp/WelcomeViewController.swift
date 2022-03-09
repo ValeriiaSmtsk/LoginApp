@@ -9,11 +9,13 @@ import UIKit
 import SwiftUI
 
 class WelcomeViewController: UIViewController {
-
+// MARK: - IB Outlets
     @IBOutlet var userGreetingLabel: UILabel!
     
+// MARK: - Public Properties
     var userGreeting: String!
     
+// MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let userGreeting = userGreeting else { return }

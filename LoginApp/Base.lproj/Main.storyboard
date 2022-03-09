@@ -17,30 +17,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="2KC-qo-BdY">
-                                <rect key="frame" x="50" y="338" width="314" height="230"/>
+                                <rect key="frame" x="50" y="290" width="314" height="224"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kx2-MX-Ktd">
-                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
-                                    </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="LNo-4g-lcD">
-                                        <rect key="frame" x="0.0" y="64" width="314" height="34"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kx2-MX-Ktd">
+                                        <rect key="frame" x="0.0" y="64" width="314" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CmT-g6-FAh">
-                                        <rect key="frame" x="0.0" y="128" width="314" height="42"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="128" width="314" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Log In"/>
                                         <connections>
                                             <action selector="logInButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="hGN-Ap-0tl"/>
-                                            <segue destination="nmV-kq-EUI" kind="presentation" modalPresentationStyle="fullScreen" id="VS9-P2-PoP"/>
+                                            <segue destination="nmV-kq-EUI" kind="presentation" identifier="logInSegue" modalPresentationStyle="fullScreen" id="VS9-P2-PoP"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="13n-2E-0Jr">
-                                        <rect key="frame" x="0.0" y="200" width="314" height="30"/>
+                                        <rect key="frame" x="0.0" y="194" width="314" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rxa-IV-phe">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
@@ -60,7 +60,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="rxa-IV-phe" firstAttribute="width" secondItem="XYC-5y-5nX" secondAttribute="width" multiplier="1.0813" id="xgC-oZ-RGR"/>
+                                            <constraint firstItem="rxa-IV-phe" firstAttribute="width" secondItem="XYC-5y-5nX" secondAttribute="width" multiplier="1.0813" id="Teb-TU-dui"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -69,12 +69,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2KC-qo-BdY" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3TV-EA-UGe"/>
+                            <constraint firstItem="2KC-qo-BdY" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-46" id="P4h-P4-sz7"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2KC-qo-BdY" secondAttribute="trailing" constant="50" id="nln-CA-oVl"/>
                             <constraint firstItem="2KC-qo-BdY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="ulR-PG-ix6"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="forgotPasswordButton" destination="XYC-5y-5nX" id="bPQ-YF-zOb"/>
+                        <outlet property="forgotUserNameButton" destination="rxa-IV-phe" id="DHa-l4-nPj"/>
                         <outlet property="passwordTF" destination="kx2-MX-Ktd" id="5EX-f7-Mwc"/>
                         <outlet property="userNameTF" destination="LNo-4g-lcD" id="EEH-1R-k2j"/>
                     </connections>
