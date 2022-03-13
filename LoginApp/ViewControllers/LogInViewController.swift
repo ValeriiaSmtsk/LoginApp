@@ -50,7 +50,7 @@ class LogInViewController: UIViewController {
     }
 }
 
-// MARK: - Private Method
+// MARK: - Alert Controller
 extension LogInViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

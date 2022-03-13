@@ -9,6 +9,7 @@ import UIKit
 
 class AboutMeViewController: UIViewController {
     
+    // MARK: - IB Outlets
     @IBOutlet var aboutMeLabel: UILabel!
     @IBOutlet var userPhotoIV: UIImageView!
     
@@ -16,10 +17,9 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var educationButton: UIButton!
     @IBOutlet var workExperience: UIButton!
     
-    
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         userPhotoIV.layer.cornerRadius = userPhotoIV.frame.width / 2
         
         hobbiButton.layer.cornerRadius = 10
@@ -36,7 +36,8 @@ class AboutMeViewController: UIViewController {
 Живу в \(person.liveInCity)
 """
     }
- 
+    
+    // MARK: - IB Actions
     @IBAction func showInfoAboutUser(_ sender: UIButton) {
         if sender.tag == 0 {
             showAlert(title: "Hobbi", message: person.hobbies)
@@ -48,6 +49,7 @@ class AboutMeViewController: UIViewController {
     }
 }
 
+// MARK: - Alert Controller
 extension AboutMeViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
