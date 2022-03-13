@@ -18,8 +18,6 @@ class AboutMeViewController: UIViewController {
     @IBOutlet var educationButton: UIButton!
     @IBOutlet var workExperience: UIButton!
     
-    var userPhoto: UIImage!
-    
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +26,7 @@ class AboutMeViewController: UIViewController {
         hobbiButton.layer.cornerRadius = 10
         educationButton.layer.cornerRadius = 10
         workExperience.layer.cornerRadius = 10
-        
-        userPhotoIV.image = userPhoto
-        
+                
         view.addVerticalGradientLayer(topColor: .lightPurple, bottomColor: .lightBlue)
         
         aboutMeLabel.text =
