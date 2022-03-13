@@ -17,7 +17,6 @@ struct User {
 struct Person {
     let name: String
     let surname: String
-    var fullName: String {"\(name) \(surname)"}
     let age: Int
     let fromCountry: String
     let liveInCity: String

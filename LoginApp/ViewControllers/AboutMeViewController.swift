@@ -30,7 +30,7 @@ class AboutMeViewController: UIViewController {
         
         aboutMeLabel.text =
  """
-Меня зовут \(person.fullName)
+Меня зовут \(person.name) \(person.surname)
 Мне \(person.age)
 Я из \(person.fromCountry)
 Живу в \(person.liveInCity)
