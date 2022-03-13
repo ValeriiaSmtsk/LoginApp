@@ -9,16 +9,15 @@ import UIKit
 import SwiftUI
 
 class WelcomeViewController: UIViewController {
-// MARK: - IB Outlets
+    // MARK: - IB Outlets
     @IBOutlet var userGreetingLabel: UILabel!
     
-// MARK: - Public Properties
-    var userGreeting: String!
+    // MARK: - Public Properties
+    var userGreeting = ""
     
-// MARK: - Override Methods
+    // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let userGreeting = userGreeting else { return }
         userGreetingLabel.text = "Welcome, \(userGreeting)!"
         
         let gradientLayer = CAGradientLayer()
@@ -31,7 +30,7 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-// MARK: - UIColor class variable
+    // MARK: - UIColor class variable
 extension UIColor {
     class var lightBlue: UIColor {
         return UIColor(red: 113.0 / 255.0, green: 197.0 / 255.0, blue: 231.0 / 255.0, alpha: 1)
