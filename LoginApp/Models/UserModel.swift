@@ -20,6 +20,7 @@ struct Person {
     var fullName: String {"\(name) \(surname)"}
     let age: Int
     let fromCountry: String
+    let liveInCity: String
     let hobbies: String
     let education: String
     let workExperience: String
@@ -30,6 +31,7 @@ let person = Person(
     surname: "Смецкая",
     age: 22,
     fromCountry: "Украины",
+    liveInCity: "Cанкт-Петербуге",
     hobbies:
 """
 Я обожаю играть в консольные и компьютерные игры.

@@ -26,15 +26,15 @@ class AboutMeViewController: UIViewController {
         educationButton.layer.cornerRadius = 10
         workExperience.layer.cornerRadius = 10
         
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
-        gradientLayer.colors = [
-            UIColor.lightPurple.cgColor,
-            UIColor.lightBlue.cgColor
-        ]
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        view.addVerticalGradientLayer(topColor: .lightPurple, bottomColor: .lightBlue)
         
-        aboutMeLabel.text = " Меня зовут \(person.fullName)\n Мне \(person.age)\n Я из \(person.fromCountry)"
+        aboutMeLabel.text =
+ """
+Меня зовут \(person.fullName)
+Мне \(person.age)
+Я из \(person.fromCountry)
+Живу в \(person.liveInCity)
+"""
     }
  
     @IBAction func showInfoAboutUser(_ sender: UIButton) {

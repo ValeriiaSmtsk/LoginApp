@@ -19,14 +19,20 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         userGreetingLabel.text = "Welcome, \(userGreeting)!"
-        
+        view.addVerticalGradientLayer(topColor: .lightPurple, bottomColor: .lightBlue)
+    }
+}
+
+// MARK: - Set background color
+extension UIView {
+    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
         let gradientLayer = CAGradientLayer()
-        gradientLayer.frame = view.bounds
+        gradientLayer.frame = bounds
         gradientLayer.colors = [
-            UIColor.lightPurple.cgColor,
-            UIColor.lightBlue.cgColor
+            topColor.cgColor,
+            bottomColor.cgColor
         ]
-        view.layer.insertSublayer(gradientLayer, at: 0)
+        layer.insertSublayer(gradientLayer, at: 0)
     }
 }
 
