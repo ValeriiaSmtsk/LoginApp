@@ -21,6 +21,8 @@ class LogInViewController: UIViewController {
         for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userGreeting = person.name
+            } else if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.userPhoto = user.person.picture
             }
         }
     }

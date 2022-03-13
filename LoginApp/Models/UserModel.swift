@@ -18,6 +18,7 @@ struct Person {
     let name: String
     let surname: String
     let age: Int
+    let picture: UIImage
     let fromCountry: String
     let liveInCity: String
     let hobbies: String
@@ -29,6 +30,7 @@ let person = Person(
     name: "Валерия",
     surname: "Смецкая",
     age: 22,
+    picture: #imageLiteral(resourceName: "Image"),
     fromCountry: "Украины",
     liveInCity: "Cанкт-Петербуге",
     hobbies:
