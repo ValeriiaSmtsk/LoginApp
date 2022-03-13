@@ -30,7 +30,7 @@ class WelcomeViewController: UIViewController {
     }
 }
 
-    // MARK: - UIColor class variable
+// MARK: - UIColor class variable
 extension UIColor {
     class var lightBlue: UIColor {
         return UIColor(red: 113.0 / 255.0, green: 197.0 / 255.0, blue: 231.0 / 255.0, alpha: 1)

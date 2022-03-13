@@ -13,19 +13,21 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    // MARK: - Private Properties
-    private let userName = "Valeriia"
-    private let password = "Password"
-    
     // MARK: Override Methods
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.userGreeting = userName
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        for viewController in viewControllers {
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userGreeting = person.name
+            }
+        }
     }
     
     // MARK: - IB Actions
     @IBAction func logInButtonPressed() {
-        guard userNameTF.text == userName && passwordTF.text == password else {
+        guard userNameTF.text == user.userName && passwordTF.text == user.password else {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login or password ",
@@ -43,12 +45,12 @@ class LogInViewController: UIViewController {
     
     @IBAction func showAuthorizationData(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Ooops!", message: "Your name is \(userName) 😉")
-        : showAlert(title: "Ooops!", message: "Your password is \(password) 😉")
+        ? showAlert(title: "Ooops!", message: "Your name is \(user.userName) 😉")
+        : showAlert(title: "Ooops!", message: "Your password is \(user.password) 😉")
     }
 }
-    
-    // MARK: - Private Method
+
+// MARK: - Private Method
 extension LogInViewController {
     private func showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -67,12 +69,12 @@ extension LogInViewController: UITextFieldDelegate {
         view.endEditing(true)
     }
     
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            if textField == userNameTF {
-                passwordTF.becomeFirstResponder()
-            } else {
-                logInButtonPressed()
-            }
-            return true
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == userNameTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            logInButtonPressed()
         }
+        return true
+    }
 }
