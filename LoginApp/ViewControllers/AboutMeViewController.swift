@@ -20,7 +20,7 @@ class AboutMeViewController: UIViewController {
     // MARK: - Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        userPhotoIV.layer.cornerRadius = userPhotoIV.frame.width / 2
+        userPhotoIV.layer.cornerRadius = userPhotoIV.frame.size.height / 2
         
         hobbiButton.layer.cornerRadius = 10
         educationButton.layer.cornerRadius = 10
